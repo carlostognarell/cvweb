@@ -10648,7 +10648,7 @@ a {
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
-  color: #f8b739;
+  color: #117a8b;
 }
 a:hover,
 a:focus {
@@ -10781,11 +10781,11 @@ h5,
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 #sidebar ul li a:hover {
-  color: #f8b739;
+  color: #117a8b;
 }
 #sidebar ul li.active > a {
   background: transparent;
-  color: #f8b739;
+  color: #117a8b;
 }
 @media (max-width: 991.98px) {
   #sidebar {
@@ -10826,13 +10826,13 @@ a[data-toggle="collapse"] {
 }
 
 .btn.btn-primary {
-  background: #f8b739;
-  border-color: #f8b739;
+  background: #117a8b;
+  border-color: #117a8b;
 }
 .btn.btn-primary:hover,
 .btn.btn-primary:focus {
-  background: #f8b739 !important;
-  border-color: #f8b739 !important;
+  background: #117a8b !important;
+  border-color: #117a8b !important;
 }
 
 .footer p {
