@@ -15,16 +15,20 @@
     html {
       scroll-behavior: smooth;
     }
-
-    @media only screen and (min-width: 1026px) {
-      #divMenu {
-        position: fixed;
+     #divNavMovil{
+        display: none;
       }
-    }
 
-    /* body{
-      background-color: black;
-    } */
+    @media only screen and (max-width: 1026px) {
+      #divNavMovil {
+        display: block;
+        position: fixed;
+        width: 100%;
+      }
+      #navCollapse {
+        display: none;
+      }
+    } 
 
     #myBtn {
       display: none;
@@ -46,15 +50,37 @@
       background-color: #555;
     }
   </style>
-  <link rel="icon" href="images/logo2.jpg" type="image/x-icon" />
+  <link rel="icon" href="images/logo.jpg" type="image/x-icon" />
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="divNavMovil">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#section-about">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
   <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-double-up"></i></button>
   <div class="wrapper d-flex align-items-stretch">
     <nav id="sidebar">
-      <div class="p-4 pt-3" style="width: 300px" id="divMenu">
-        <a class="img logo rounded-circle mb-5" style="background-image: url(images/logo2.jpg)"></a>
+      <div class="p-4 pt-3" id="divSidebar">
+        <a class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg)"></a>
         <ul class="list-unstyled components mb-5">
           <li>
             <a href="#section-about">Sobre mi</a>
@@ -78,12 +104,12 @@
         </ul>
       </div>
     </nav>
-
+    
     <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5">
       <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navCollapse">
         <div class="container-fluid">
-          <button type="button" id="sidebarCollapse" class="btn btn-info">
+          <button type="button"  class="btn btn-info">
             <i class="fa fa-bars"></i>
             <span class="sr-only">Toggle Menu</span>
           </button>
@@ -97,65 +123,64 @@
           </div>
         </div>
       </nav>
+      
       <section id="section-about">
-        <h2 class="mb-4"><i class="fas fa-user-astronaut"></i>&nbsp;SOBRE MÍ</h2>
+        <h2 class="mb-4">SOBRE MÍ</h2>
         <p class="lead mb-5">
-          <strong>¡Hola Mundo! <span style="font-size:20px;">😀</span> Mi nombre es Carlos Tognarell Ross, tengo 29 años
-            y soy
-            ingeniero informático titulado de DUOC UC. Tengo 6 años de experiencia profesional y un stack primario de
-            desarrollo orientado principalmente a tecnologías del ecosistema Microsoft; tales como .NET Framework, .NET
-            Core, C#, ASP.NET, Webforms, ASP.NET MVC, Windows Forms, Windows Services, Web API,
-            Azure Functions, Azure API Management, SQL Server, Analysis Services, Reporting Services,
-            Integration Services y Azure DevOps, entre muchas otras.
-            <br />
-            <br />
-            Me gusta la informática, en especial el desarrollo de software y aprender nuevas tecnologías;
-            por lo que en esta etapa de mi carrera profesional, estoy ampliando mi stack de desarrollo con tecnologías
-            como React y Angular para el front-end de aplicaciones; NodeJs y Python para desarrollos back-end y bases de
-            datos NoSQL.
-            <br />
-            <br />
-            En el ámbito profesional soy muy motivado, proactivo y versátil, ya que puedo participar tanto en la parte
-            técnica como en la parte administrativa de los proyectos debido a que he tenido experiencia desarrollando y
-            liderando
-            en marcos de trabajos ágiles y tradicionales.
-            <br />
-            <br />
-            En el ámbito personal soy comprometido y sociable; por lo que me gusta ser parte de equipos de trabajo
-            multidisciplinarios donde pueda aportar con mis conocimientos y aprender de mis compañeros; como también me
-            gusta
-            participar y ser miembro activo en comunidades de desarrollo, videojuegos e informática en
-            internet.</strong>
+          Hola Mundo! Mi nombre es Carlos Tognarell Ross, tengo 29 años y soy
+          ingeniero informático titulado de DUOC UC. Tengo 6 años de experiencia y un stack primario de
+          desarrollo orientado principalmente a tecnologías del ecosistema Microsoft; tales como .NET Framework, .NET
+          Core, C#, ASP.NET
+          Webforms, ASP.NET MVC, Windows Forms, Windows Services, Web API,
+          Azure Functions, Azure API Management, SQL Server, Analysis
+          Services, Reporting Services, Integration Services y Azure DevOps, entre muchas otras.
+          <br />
+          <br />
+          Me gusta el desarrollo de software y aprender nuevas tecnologías; por lo que en esta etapa de mi carrera
+          profesional, estoy ampliando mi stack de desarrollo con tecnologías como React y Angular para el front-end de
+          aplicaciones,
+          NodeJs y Python para desarrollos back-end, y bases de datos NoSQL como MongoDB.
+          <br />
+          <br />
+          En el ámbito profesional soy muy motivado, proactivo y versátil, ya que puedo participar tanto en la parte
+          técnica como en la parte administrativa de los proyectos debido a que he tenido experiencia desarrollando y
+          liderando
+          en marcos de trabajos ágiles y tradicionales.
+          <br />
+          <br />
+          En el ámbito personal soy comprometido y sociable; por lo que me gusta ser parte de equipos de trabajo
+          multidisciplinarios donde pueda aportar con mis conocimientos y aprender de mis compañeros; como también me
+          gusta
+          participar y ser miembro activo en comunidades de desarrollo, videojuegos e informática en internet.
           <hr class="m-8" />
-          <br>
-        <h2 class="mb-4"><i class="fas fa-file-alt"></i>&nbsp;INFORMACI&Oacute;N PERSONAL</h2>
+        <h2 class="mb-4">INFORMACI&Oacute;N PERSONAL</h2>
         <table class="table table-striped">
           <tr>
-            <td style="width: 150px;"><strong>NOMBRE:</strong></td>
+            <td style="width: 150px;">NOMBRE:</td>
             <td>CARLOS TOGNARELL ROSS</td>
           </tr>
           <tr>
-            <td><strong>CELULAR:</strong></td>
+            <td>CELULAR:</td>
             <td>+56988492281</td>
           </tr>
           <tr>
-            <td><strong>CORREO:</strong></td>
+            <td>CORREO:</td>
             <td>CARLOSTOGNARELL@GMAIL.COM</td>
           </tr>
           <tr>
-            <td><strong>NACIMIENTO:</strong></td>
+            <td>NACIMIENTO:</td>
             <td>16 - DICIEMBRE - 1991</td>
           </tr>
           <tr>
-            <td><strong>RESIDENCIA:</strong></td>
+            <td>RESIDENCIA:</td>
             <td>PEDRO AGUIRRE CERDA, SANTIAGO DE CHILE, REGIÓN METROPOLITANA</td>
           </tr>
           <tr>
-            <td><strong>IDIOMAS:</strong></td>
+            <td>IDIOMAS:</td>
             <td>ESPAÑOL, INGL&Eacute;S MEDIO</td>
           </tr>
           <tr>
-            <td><strong>RRSS:</strong></td>
+            <td>RRSS</td>
             <td>
               <!-- Facebook -->
               <a href="https://www.facebook.com/carlostognarell/" target="_blank"><i
@@ -191,8 +216,9 @@
       </section>
       <hr class="m-8" />
       <section id="section-experience">
+
         <p class="lead mb-5">
-        <h2 class="mb-4"><i class="fas fa-code"></i>&nbsp;EXPERIENCIA PROFESIONAL</h2>
+        <h2 class="mb-4">EXPERIENCIA PROFESIONAL</h2>
         <div class="container">
           <ul class="timeline">
             <li>
@@ -208,17 +234,13 @@
                     Steward es una empresa l&iacute;der en el rubro gastron&oacute;mico y HORECA. Durante el tiempo que
                     estuve en Steward ejerc&iacute; el cargo de Ingeniero de Software;
                     encarg&aacute;ndome de:
-                    <br />
-                    <br />
                   <ul>
                     <li>Realizar levantamiento y propuesta tecnológica de los proyectos transversales a todas las
                       unidades de negocio.</li>
-                    <br />
                     <li>Controlar código fuente y versionamiento de los artefactos desarrollados en la compañía.</li>
-                    <br />
                     <li>Desarrollar sistemas para la integración entre los múltiples canales de venta de la empresa y su
-                      ERP.</li> <br />
-                    <li>Mantención y optimización del software existente, y soporte vía mesa de ayuda.</li> <br />
+                      ERP.</li>
+                    <li>Mantención y optimización del software existente, y soporte vía mesa de ayuda.</li>
                     <li>Seguimiento y gestión de proyectos externalizados con proveedores.</li>
                   </ul>
                   </p>
@@ -239,17 +261,15 @@
                     de distintos sectores de negocio a nivel nacional. Durante el tiempo que ejerc&iacute; como Jefe de
                     Proyectos TI tuve la
                     responsabilidad de:
-                    <br /> <br />
                   <ul>
-                    <li>Realizar la planificación y seguimiento de la correcta ejecución de proyecto informáticos.</li>
-                    <br />
-                    <li>Ser el canal oficial de comunicación clientes y el equipo técnico de la empresa.</li> <br />
-                    <li>Informar a la PMO y jefatura los estados de avances y desviaciones de ésto.s</li> <br />
+                    <li>Realizar la planificación y seguimiento de la correcta ejecución de proyecto informáticos</li>
+                    <li>ser el canal oficial de comunicación para el nexo entre clientes y el equipo técnico</li>
+                    <li>informar a la PMO y jefatura los estados de avances y desviaciones de éstos</li>
 
-                    <li>Liderar, ser un facilitador, mitigar los riesgos y generar una buena colaboración en los equipos
-                      de desarrollo.</li> <br />
+                    <li>liderar, ser un facilitador, mitigar los riesgos y generar una buena colaboración en los equipos
+                      de desarrollo</li>
                     <li>
-                      Apoyar técnicamente al equipo.</li> <br />
+                      Apoyar técnicamente al equipo.</li>
                   </ul>
                   </p>
 
@@ -263,21 +283,24 @@
                   <h4 class="timeline-title">Tech Leader</h4>
                   <p><strong class="text-muted"><i class="fas fa-users"></i> DSAC Chile | Ene 2016 - Jun
                       2018</strong></p>
+
                 </div>
                 <div class="timeline-body">
-                  <p>Durante el tiempo que ejerc&iacute; como Tech Leader en DSAC Chile tuve la responsabilidad de:
-                    <br />
-                    <br />
+                  <p>DSAC Chile es una empresa de servicios de tecnolog&iacute;as de la informaci&oacute;n que presta
+                    servicios a clientes
+                    de distintos sectores de negocio a nivel nacional. Durante el tiempo que ejerc&iacute; como Tech
+                    Leader tuve la
+                    responsabilidad de:
                   <ul>
-                    <li>Participar en todo el ciclo de vida de las soluciones tecnol&oacute;gicas.</li> <br />
-                    <li>Generar levantamiento de proyectos y requerimientos con stakeholders.</li> <br />
-                    <li>Generar propuestas de soluciones tecnológicas siguiendo las mejores prácticas y
-                      lineamientos propios de la compañ&iacute;a.</li> <br />
+                    <li>Participar en todo el ciclo de vida de las soluciones tecnol&oacute;gicas</li>
+                    <li>Generar levantamiento de proyectos y requerimientos con stakeholders</li>
+                    <li>generar propuestas de soluciones tecnológicas basándome en las mejores prácticas y
+                      lineamientos propios de la compañ&iacute;a</li>
                     <li>Liderar al equipo de desarrollo desde el punto de vista técnico,
                       resolviendo dudas y distribuyendo el trabajo en base a los conocimientos técnicos
-                      de cada integrante del equipo.</li> <br />
-                    <li>Generar documentación técnica y funcional.</li> <br />
-                    <li>Realizar control de calidad t&eacute;cnico/funcional de las soluciones desarrolladas.</li>
+                      de cada integrante del equipo.</li>
+                    <li>Generar documentación técnica y funcional</li>
+                    <li>Realizar control de calidad t&eacute;cnico/funcional de las soluciones desarrolladas</li>
                   </ul>
                   </p>
                 </div>
@@ -292,16 +315,17 @@
                       2015</strong></p>
                 </div>
                 <div class="timeline-body">
-                  <p>Durante el tiempo que ejerc&iacute; como Web Developer en DSAC Chile tuve la
+                  <p>DSAC Chile es una empresa de servicios de tecnolog&iacute;as de la informaci&oacute;n que presta
+                    servicios a clientes
+                    de distintos sectores de negocio a nivel nacional. Durante el tiempo que ejerc&iacute; como Web
+                    Developer tuve la
                     responsabilidad de:
-                    <br />
-                    <br />
                   <ul>
-                    <li>Programar artefactos de software en base a los lineamientos del líder técnico y de la jefatura.
-                    </li> <br />
-                    <li>Generar deploys y subir a distintos ambientes las aplicaciones desarrolladas.</li> <br />
-                    <li>Generar documentación funcional.</li> <br />
-                    <li>Participar en las reuniones de levantamiento.</li> <br />
+                    <li>Programar artefactos de software en base a los lineamientos del líder técnico y de la jefatura
+                    </li>
+                    <li>Generar deploys y subir a distintos ambientes las aplicaciones desarrolladas</li>
+                    <li>Generar documentación funcional </li>
+                    <li>Participar en las reuniones de levantamiento</li>
                   </ul>
                   </p>
                 </div>
@@ -312,9 +336,8 @@
         </p>
       </section>
       <hr class="m-8" />
-      <br />
       <section id="section-education">
-        <h2 class="mb-4"><i class="fas fa-university"></i>&nbsp;FORMACIÓN ACADÉMICA</h2>
+        <h2 class="mb-4">FORMACIÓN ACADÉMICA</h2>
         <p class="lead mb-5">
         <table class="table table-striped">
           <thead>
@@ -350,74 +373,33 @@
         </p>
       </section>
       <hr class="m-8" />
-      <br />
       <section id="section-courses">
-        <h2 class="mb-4"><i class="fas fa-university"></i>&nbsp;CURSOS Y FORMACI&Oacute;N REGLADA</h2>
+        <h2 class="mb-4">CURSOS Y FORMACI&Oacute;N REGLADA</h2>
         <p class="lead mb-5">
-        <table>
-          <tr>
-            <td>
-              <h4 class="mb-4">🏆&nbsp;SCRUM FOUNDATION PROFESSIONAL CERTIFICATE</h4>
-            </td>
-            <td>
-              <h6 class="mb-4"> &nbsp;| &nbsp;CERTIPROF - JUNIO 2020</h6>
-            </td>
-          </tr>
-        </table>
+          Desde los ultimos 2 años de mi enseñanza media en adelante he podido participar y completar los siguientes
+          cursos y
+          certificaciones.
         </p>
         <p class="lead mb-5">
-        <table>
-          <tr>
-            <td>
-              <h4 class="mb-4">🏆&nbsp;SCRUM MASTER PROFESSIONAL CERTIFICATE</h4>
-            </td>
-            <td>
-              <h6 class="mb-4"> &nbsp;| &nbsp;CERTIPROF - MAYO 2018</h6>
-            </td>
-          </tr>
-        </table>
+          <i class="fas fa-trophy">&nbsp;DEVELOPING MICROSOFT AZURE SOLUTIONS</i>
+          <!-- <br>
+          Sonda -->
         </p>
         <p class="lead mb-5">
-        <table>
-          <tr>
-            <td>
-              <h4 class="mb-4">🏆&nbsp;SCRUM DEVELOPER PROFESSIONAL CERTIFICATE</h4>
-            </td>
-            <td>
-              <h6 class="mb-4"> &nbsp;| &nbsp;CERTIPROF - JUNIO 2018</h6>
-            </td>
-          </tr>
-        </table>
+          <i class="fas fa-trophy">&nbsp;SCRUM MASTER PROFESSIONAL CERTIFICATE</i>
         </p>
         <p class="lead mb-5">
-        <table>
-          <tr>
-            <td>
-              <h4 class="mb-4">🏆&nbsp;DEVELOPING AZURE SOLUTIONS</h4>
-            </td>
-            <td>
-              <h6 class="mb-4"> &nbsp;| &nbsp;SONDA - DICIEMBRE 2017</h6>
-            </td>
-          </tr>
-        </table>
+          <i class="fas fa-trophy">&nbsp;SCRUM DEVELOPER PROFESSIONAL CERTIFICATE</i>
         </p>
         <p class="lead mb-5">
-        <table>
-          <tr>
-            <td>
-              <h4 class="mb-4">🏆&nbsp;ASISTENTE ADMINISTRATIVO CON INGLÉS BÁSICO</h4>
-            </td>
-            <td>
-              <h6 class="mb-4"> &nbsp;| &nbsp;INACAP - DICIEMBRE 2009</h6>
-            </td>
-          </tr>
-        </table>
+          <i class="fas fa-trophy">&nbsp;SCRUM FOUNDATIONS PROFESSIONAL CERTIFICATE</i>
         </p>
-        <br />
+        <p class="lead mb-5">
+          <i class="fas fa-trophy">&nbsp;ASISTENTE ADMINISTRATIVO CON INGLÉS BÁSICO</i>
+        </p>
 
       </section>
       <hr class="m-8" />
-      <br />
       <section id="section-skills">
         <h2 class="mb-4"><i class="fas fa-cogs"></i>&nbsp;HABILIDADES TÉCNICAS</h2>
         <p class="lead mb-5">
@@ -679,13 +661,14 @@
         </p>
       </section>
       <hr class="m-8" />
-      <br />
       <section id="section-projects">
-        <h2 class="mb-4"><i class="fas fa-project-diagram"></i>&nbsp;Proyectos</h2>
+        <h2 class="mb-4">Proyectos</h2>
         <p class="lead mb-5">
-          <strong>A lo largo de mi carrera profesional he podido desarrollarme y aplicar conocimientos en distintos tipos de
-            proyectos para clientes de distintas líneas de negocio a nivel nacional. 
-            A continuación un listado de algunos proyectos en los que he tenido el honor de participar y colaborar.</strong> 
+          A lo largo de mi carrera profesional he podido desarrollarme y aplicar conocimientos en distintos tipos de
+          proyectos
+          para clientes de distintas líneas de negocio a nivel nacional. A continuación un listado de algunos proyectos
+          en los que
+          he tenido el honor de participar y colaborar.
         </p>
         <p class="lead mb-5">
         <div class="row">
@@ -929,11 +912,11 @@
         </p>
       </section>
       <hr class="m-8" />
-      <br />
       <section id="section-byebye">
         <p class="lead mb-5">
-          <strong>Si has llegado hasta aquí te dejo invitado a contactarme mediante mi celular o mis redes sociales.
-            Siempre estoy dispuesto a escuchar ofertas, reclamos y sugerencias <span style="font-size:20px;">😀</span></strong>
+          Si has llegado hasta aquí te dejo invitado a contactarme mediante mi celular o mis redes sociales. Siempre
+          estoy dispuesto
+          a escuchar ofertas, reclamos y sugerencias <span style="font-size:20px;">😀</span>
         <h4 class="mb-4">Carlos Tognarell Ross +56988492281</h4>
         </p>
       </section>
